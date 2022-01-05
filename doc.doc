@@ -1,0 +1,49 @@
+
+#########################################
+Create Local Repository:
+
+1- Creat project folder and make it as local repository.
+   git init foldername
+2- OR inside the folder project, write down:
+    git init
+3- Snapshoot the project files to repository:
+    git add .   Or git add filename
+4- State the folder status:
+    git status
+5- Commit these file to repo. :
+    git commit -m "message"
+6- To refret (go back to previous commit) the changes:
+    git checkout <id of which commit want to goback> file name
+7- To discard this refert :
+    git reset HEAD filename
+    git checkout -- filename
+
+
+######################################
+Online git Repository : To make your local repository Online.
+
+1- Create a repository in your github account, and copy the url.
+2- Inside the repsitory folder which was created by (git init), write down:
+    git remote add origin url
+3- Push all content of local repository that are allready committed to online repository:
+    git push -u origin master/main
+4- You can do the reverse of this process, to get online repository to local one:
+    git clone url
+
+############################################
+Set up the Node.js 
+
+1- Install nodejs by download it and setup it.
+2- Check it by down write followin command in cmd:
+    node --version
+3- Create project for your project and open cmd inside it and run:
+    npm init
+4- Use the npm to install modules (Ex : server-lite ):
+    node install lite-server --save/--save-dev
+5- open package.json file and edite the "scripts" item (add th efollowing):
+    "start":"npm run lite",
+    "lite":"lite-server"
+6- Creat file (.gitignore) and add the following (node_modules)
+6- In cmd run:
+    node start
+the project is runing now...and any modifying disply instantly.
